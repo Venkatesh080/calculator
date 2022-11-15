@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>calculator</title>
+        <style>
+            button{
+                color: blue;
+                border-width: 10px;
+            }
+            h2{
+                color:aqua;
+            }
+        </style>
+        </head>
+        <body bgcolor="red">
+            <h2>enter the first number
+            <input type="text" id="n1" name="n1"/><br></h2>
+            <h2>enter the second number
+            <input type="text" id="n2" name="n2"/><br></h2>
+            <button value="add" onclick="addition()">add</button>
+            <button value="sub" onclick="subtraction()">sub</button>
+            <button value="mul" onclick="multiplication()">mul</button>
+            <button value="div" onclick="division()" >div</button><br>
+            <h2>TOTAL<input type="text" id="Result"/></h2><br>
+            <script>
+                function addition(){
+                    const a=parseInt(document.getElementById("n1").value);
+                    const b=parseInt(document.getElementById("n2").value);
+                    const c=a+b;
+                    document.getElementById("Result").value=c;
+                }
+                function subtraction(){
+                    const a=parseInt(document.getElementById("n1").value);
+                    const b=parseInt(document.getElementById("n2").value);
+                    const c=a-b;
+                    document.getElementById("Result").value=c;
+                }
+                function multiplication(){
+                    const a=parseInt(document.getElementById("n1").value);
+                    const b=parseInt(document.getElementById("n2").value);
+                    const c=a*b;
+                    document.getElementById("Result").value=c;
+                }
+                function division(){
+                    const a=parseInt(document.getElementById("n1").value);
+                    const b=parseInt(document.getElementById("n2").value);
+                    const c=a/b;
+                    document.getElementById("Result").value=c;
+                }
+            </script>
+        </body>
+</html>
